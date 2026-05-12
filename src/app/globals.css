@@ -1,0 +1,37 @@
+@import "tailwindcss";
+
+/* Logo-derived palette (sampled from rendered brand PDF: rgb(65,116,185) and tints) */
+:root {
+  --background: #ffffff;
+  --foreground: #1a1a1a;
+  --primary: #4174b9;
+  --primary-dark: #325a94;
+  --primary-soft: #dde6f2;
+  --primary-muted: #a8bdd9;
+  --surface: #f4f7fb;
+  --border: #e2e8f0;
+  --muted: #64748b;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-primary-dark: var(--primary-dark);
+  --color-primary-soft: var(--primary-soft);
+  --color-primary-muted: var(--primary-muted);
+  --color-surface: var(--surface);
+  --color-border: var(--border);
+  --color-muted: var(--muted);
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+}
