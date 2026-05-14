@@ -28,16 +28,16 @@ const serviceLinks = [
 ];
 
 const industryLinks = [
-  { href: "#industries", label: "Insurance" },
-  { href: "#industries", label: "Healthcare" },
+  { href: "/industries/call-center-insurance", label: "Insurance" },
+  { href: "/industries/healthcare-call-center", label: "Healthcare" },
   { href: "#industries", label: "Real estate" },
   { href: "#industries", label: "Financial" },
   { href: "#industries", label: "Information technology" },
 ];
 
 const resourceLinks = [
-  { href: "/contact-us", label: "Jobs" },
-  { href: "#faq", label: "Blogs" },
+  { href: "/call-center-jobs", label: "Jobs" },
+  { href: "/blog", label: "Blogs" },
 ];
 
 type MobilePanel =
@@ -212,7 +212,7 @@ export function Header() {
           </div>
 
           <Link
-            href="#about"
+            href="/about"
             className="rounded-md px-3 py-1.5 text-sm font-medium hover:bg-primary-soft"
           >
             About
@@ -376,7 +376,7 @@ export function Header() {
             ) : null}
 
             {[
-              ["About", "#about"],
+              ["About", "/about"],
               ["Contact", "/contact-us"],
             ].map(([label, href]) => (
               <Link

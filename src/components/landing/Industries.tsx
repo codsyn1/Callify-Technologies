@@ -1,9 +1,11 @@
-const industries = [
-  "Insurance",
-  "Healthcare",
-  "Real estate",
-  "Financial services",
-  "Information technology",
+import Link from "next/link";
+
+const industries: { name: string; href: string }[] = [
+  { name: "Insurance", href: "/industries/call-center-insurance" },
+  { name: "Healthcare", href: "/industries/healthcare-call-center" },
+  { name: "Real estate", href: "#industries" },
+  { name: "Financial services", href: "#industries" },
+  { name: "Information technology", href: "#industries" },
 ];
 
 export function Industries() {
@@ -16,12 +18,14 @@ export function Industries() {
           technical troubleshooting—without losing the human touch.
         </p>
         <ul className="mt-8 flex flex-wrap gap-3">
-          {industries.map((name) => (
-            <li
-              key={name}
-              className="rounded-full border border-primary/25 bg-primary-soft px-4 py-2 text-sm font-semibold text-primary"
-            >
-              {name}
+          {industries.map(({ name, href }) => (
+            <li key={name}>
+              <Link
+                href={href}
+                className="inline-block rounded-full border border-primary/25 bg-primary-soft px-4 py-2 text-sm font-semibold text-primary transition hover:border-primary/40 hover:bg-primary-soft/80"
+              >
+                {name}
+              </Link>
             </li>
           ))}
         </ul>

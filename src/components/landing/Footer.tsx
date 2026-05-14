@@ -22,6 +22,20 @@ export function Footer() {
               brand standards, Callify Technologies is built to execute with
               clarity and care.
             </p>
+            <div className="mt-4 flex flex-col gap-2">
+              <Link
+                href="/about"
+                className="inline-block text-sm font-semibold text-primary-muted underline decoration-white/30 underline-offset-4 transition hover:text-white hover:decoration-white"
+              >
+                About us
+              </Link>
+              <Link
+                href="/blog"
+                className="inline-block text-sm font-semibold text-primary-muted underline decoration-white/30 underline-offset-4 transition hover:text-white hover:decoration-white"
+              >
+                Blog
+              </Link>
+            </div>
           </div>
           <div>
             <p className="text-sm font-bold uppercase tracking-wide text-primary-muted">
@@ -50,15 +64,29 @@ export function Footer() {
               Industries
             </p>
             <ul className="mt-4 space-y-2 text-sm text-white/80">
-              {["Insurance", "Healthcare", "Financial", "Real estate", "IT"].map(
-                (x) => (
-                  <li key={x}>
-                    <Link href="#industries" className="hover:text-white">
-                      {x}
-                    </Link>
-                  </li>
-                ),
-              )}
+              <li>
+                <Link
+                  href="/industries/call-center-insurance"
+                  className="hover:text-white"
+                >
+                  Insurance
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/industries/healthcare-call-center"
+                  className="hover:text-white"
+                >
+                  Healthcare
+                </Link>
+              </li>
+              {["Financial", "Real estate", "IT"].map((x) => (
+                <li key={x}>
+                  <Link href="#industries" className="hover:text-white">
+                    {x}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
           <div>
@@ -67,6 +95,11 @@ export function Footer() {
             </p>
             <ul className="mt-4 space-y-3 text-sm text-white/80">
               <li>United States (program delivery)</li>
+              <li>
+                <Link href="/call-center-jobs" className="hover:text-white">
+                  Call center careers
+                </Link>
+              </li>
               <li>
                 <Link href="/contact-us" className="hover:text-white">
                   Contact form &amp; locations
