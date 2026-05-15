@@ -3,9 +3,9 @@ import Link from "next/link";
 const industries: { name: string; href: string }[] = [
   { name: "Insurance", href: "/industries/call-center-insurance" },
   { name: "Healthcare", href: "/industries/healthcare-call-center" },
-  { name: "Real estate", href: "#industries" },
-  { name: "Financial services", href: "#industries" },
-  { name: "Information technology", href: "#industries" },
+  { name: "Real estate", href: "/industries/real-estate-call-center" },
+  { name: "Financial services", href: "/industries/financial-services-call-center" },
+  { name: "Information technology", href: "/industries/it-call-center" },
 ];
 
 export function Industries() {

@@ -24,15 +24,15 @@ const outboundLinks = [
 ];
 
 const serviceLinks = [
-  { href: "#services", label: "Digital marketing" },
+  { href: "/digital-marketing", label: "Digital marketing" },
 ];
 
 const industryLinks = [
   { href: "/industries/call-center-insurance", label: "Insurance" },
   { href: "/industries/healthcare-call-center", label: "Healthcare" },
-  { href: "#industries", label: "Real estate" },
-  { href: "#industries", label: "Financial" },
-  { href: "#industries", label: "Information technology" },
+  { href: "/industries/real-estate-call-center", label: "Real estate" },
+  { href: "/industries/financial-services-call-center", label: "Financial" },
+  { href: "/industries/it-call-center", label: "Information technology" },
 ];
 
 const resourceLinks = [

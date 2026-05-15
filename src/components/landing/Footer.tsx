@@ -53,8 +53,8 @@ export function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="#services" className="hover:text-white">
-                  Digital customer experience
+                <Link href="/digital-marketing" className="hover:text-white">
+                  Digital marketing
                 </Link>
               </li>
             </ul>
@@ -80,13 +80,30 @@ export function Footer() {
                   Healthcare
                 </Link>
               </li>
-              {["Financial", "Real estate", "IT"].map((x) => (
-                <li key={x}>
-                  <Link href="#industries" className="hover:text-white">
-                    {x}
-                  </Link>
-                </li>
-              ))}
+              <li>
+                <Link
+                  href="/industries/real-estate-call-center"
+                  className="hover:text-white"
+                >
+                  Real estate
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/industries/financial-services-call-center"
+                  className="hover:text-white"
+                >
+                  Financial
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/industries/it-call-center"
+                  className="hover:text-white"
+                >
+                  IT
+                </Link>
+              </li>
             </ul>
           </div>
           <div>
