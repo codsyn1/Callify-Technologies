@@ -16,11 +16,23 @@ const inboundLinks = [
 ];
 
 const outboundLinks = [
-  { href: "#services", label: "Appointment setting" },
+  {
+    href: "/call-center-services/outbound/appointment-setting-services",
+    label: "Appointment setting",
+  },
   { href: "#services", label: "Call back services" },
-  { href: "#services", label: "Lead generation" },
-  { href: "#services", label: "Live call transfer" },
-  { href: "#services", label: "Telemarketing" },
+  {
+    href: "/call-center-services/outbound/lead-generation",
+    label: "Lead generation",
+  },
+  {
+    href: "/call-center-services/outbound/live-call-transfer",
+    label: "Live call transfer",
+  },
+  {
+    href: "/call-center-services/outbound/outsource-telemarketing-services",
+    label: "Telemarketing",
+  },
 ];
 
 const serviceLinks = [
