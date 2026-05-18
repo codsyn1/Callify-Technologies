@@ -30,10 +30,52 @@ const fieldClass =
 
 export function ContactUsPage() {
   const [sent, setSent] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
-  function onSubmit(e: FormEvent<HTMLFormElement>) {
+  async function onSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    setSent(true);
+    setError(null);
+    setSubmitting(true);
+
+    const form = e.currentTarget;
+    const formData = new FormData(form);
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: formData.get("name"),
+          email: formData.get("email"),
+          phone: formData.get("phone") || undefined,
+          message: formData.get("message"),
+          source: "contact-us",
+        }),
+      });
+
+      const result = (await response.json()) as {
+        success?: boolean;
+        error?: string;
+      };
+
+      if (!response.ok || !result.success) {
+        setError(
+          result.error ??
+            "Something went wrong. Please try again or email info@callifytechnologies.com."
+        );
+        return;
+      }
+
+      setSent(true);
+      form.reset();
+    } catch {
+      setError(
+        "Network error. Please try again or email info@callifytechnologies.com."
+      );
+    } finally {
+      setSubmitting(false);
+    }
   }
 
   return (
@@ -277,11 +319,21 @@ export function ContactUsPage() {
 
                 <button
                   type="submit"
-                  className="group mt-8 inline-flex w-full items-center justify-center gap-2 rounded-xl bg-primary px-8 py-3.5 text-sm font-semibold text-white transition hover:bg-primary-dark sm:w-auto"
+                  disabled={submitting || sent}
+                  className="group mt-8 inline-flex w-full items-center justify-center gap-2 rounded-xl bg-primary px-8 py-3.5 text-sm font-semibold text-white transition hover:bg-primary-dark disabled:cursor-not-allowed disabled:opacity-60 sm:w-auto"
                 >
-                  Submit
+                  {submitting ? "Sending…" : "Submit"}
                   <ArrowRightIcon className="size-4 opacity-90 transition group-hover:translate-x-0.5" />
                 </button>
+
+                {error ? (
+                  <p
+                    className="mt-6 rounded-xl border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-800"
+                    role="alert"
+                  >
+                    {error}
+                  </p>
+                ) : null}
 
                 {sent ? (
                   <div
@@ -292,9 +344,8 @@ export function ContactUsPage() {
                       <CheckIcon className="size-4" />
                     </span>
                     <p>
-                      <span className="font-semibold">Thanks.</span> This demo
-                      does not post to a server yet—connect your API or inbox
-                      integration here.
+                      <span className="font-semibold">Thanks.</span> Your
+                      message was saved—we&apos;ll get back to you shortly.
                     </p>
                   </div>
                 ) : null}

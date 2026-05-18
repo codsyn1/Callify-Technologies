@@ -5,14 +5,38 @@ import Link from "next/link";
 import { useState } from "react";
 
 const inboundLinks = [
-  { href: "#services", label: "Lead qualification" },
-  { href: "#services", label: "Direct response" },
-  { href: "#services", label: "Live phone answering" },
-  { href: "#services", label: "Medical answering" },
-  { href: "#services", label: "Chat support" },
-  { href: "#services", label: "Outsourced tech support" },
-  { href: "#services", label: "Email support" },
-  { href: "#services", label: "Taxi answering" },
+  {
+    href: "/call-center-services/inbound/lead-qualification",
+    label: "Lead qualification",
+  },
+  {
+    href: "/call-center-services/inbound/direct-response",
+    label: "Direct response",
+  },
+  {
+    href: "/call-center-services/inbound/live-phone-answering",
+    label: "Live phone answering",
+  },
+  {
+    href: "/call-center-services/inbound/medical-answering",
+    label: "Medical answering",
+  },
+  {
+    href: "/call-center-services/inbound/chat-support",
+    label: "Chat support",
+  },
+  {
+    href: "/call-center-services/inbound/outsourced-tech-support",
+    label: "Outsourced tech support",
+  },
+  {
+    href: "/call-center-services/inbound/outsource-email-support",
+    label: "Email support",
+  },
+  {
+    href: "/call-center-services/inbound/taxi-answering-service",
+    label: "Taxi answering",
+  },
 ];
 
 const outboundLinks = [
