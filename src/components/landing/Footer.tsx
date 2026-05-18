@@ -22,30 +22,6 @@ export function Footer() {
               brand standards, Callify Technologies is built to execute with
               clarity and care.
             </p>
-            <a
-              href="mailto:info@callifytechnologies.com"
-              className="mt-4 inline-block text-sm font-semibold text-white underline decoration-white/35 underline-offset-4 transition hover:decoration-white"
-            >
-              info@callifytechnologies.com
-            </a>
-            <SocialIcons
-              className="mt-5"
-              iconClassName="border-white/20 bg-white/5 hover:border-white/40 hover:bg-white/10"
-            />
-            <div className="mt-4 flex flex-col gap-2">
-              <Link
-                href="/about"
-                className="inline-block text-sm font-semibold text-primary-muted underline decoration-white/30 underline-offset-4 transition hover:text-white hover:decoration-white"
-              >
-                About us
-              </Link>
-              <Link
-                href="/blog"
-                className="inline-block text-sm font-semibold text-primary-muted underline decoration-white/30 underline-offset-4 transition hover:text-white hover:decoration-white"
-              >
-                Blog
-              </Link>
-            </div>
           </div>
           <div>
             <p className="text-sm font-bold uppercase tracking-wide text-primary-muted">
@@ -140,7 +116,32 @@ export function Footer() {
             </ul>
           </div>
         </div>
-        <div className="mt-12 flex flex-col gap-3 border-t border-white/10 pt-8 text-xs text-white/55 sm:flex-row sm:items-center sm:justify-between">
+        <div className="mt-10 flex flex-col gap-5 border-t border-white/10 pt-8 sm:flex-row sm:flex-wrap sm:items-center sm:gap-x-8 sm:gap-y-4 lg:justify-between">
+          <a
+            href="mailto:info@callifytechnologies.com"
+            className="text-sm font-semibold text-white underline decoration-white/35 underline-offset-4 transition hover:decoration-white"
+          >
+            info@callifytechnologies.com
+          </a>
+          <SocialIcons
+            iconClassName="border-white/20 bg-white/5 hover:border-white/40 hover:bg-white/10"
+          />
+          <div className="flex flex-wrap items-center gap-x-6 gap-y-2">
+            <Link
+              href="/about"
+              className="text-sm font-semibold text-primary-muted underline decoration-white/30 underline-offset-4 transition hover:text-white hover:decoration-white"
+            >
+              About us
+            </Link>
+            <Link
+              href="/blog"
+              className="text-sm font-semibold text-primary-muted underline decoration-white/30 underline-offset-4 transition hover:text-white hover:decoration-white"
+            >
+              Blog
+            </Link>
+          </div>
+        </div>
+        <div className="mt-8 flex flex-col gap-3 border-t border-white/10 pt-8 text-xs text-white/55 sm:flex-row sm:items-center sm:justify-between">
           <p>Copyright © {new Date().getFullYear()} Callify Technologies. All rights reserved.</p>
           <div className="flex flex-wrap gap-4">
             <span className="cursor-default">Privacy policy</span>

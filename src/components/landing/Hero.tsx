@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 const HERO_IMAGE =
-  "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=1600&q=85";
+  "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=1600&q=85";
 
 export function Hero() {
   return (
@@ -52,10 +52,10 @@ export function Hero() {
           <figure className="relative aspect-[5/4] overflow-hidden rounded-3xl border border-white/60 bg-white shadow-[0_28px_60px_-28px_rgba(65,116,185,0.35)] ring-1 ring-primary/10 sm:aspect-[4/3]">
             <Image
               src={HERO_IMAGE}
-              alt="Professional team collaborating in a contact center environment"
+              alt="Business team collaborating in a modern office"
               fill
               priority
-              className="object-cover object-[center_20%]"
+              className="object-cover object-[center_30%]"
               sizes="(max-width: 1024px) 100vw, 50vw"
             />
             <div

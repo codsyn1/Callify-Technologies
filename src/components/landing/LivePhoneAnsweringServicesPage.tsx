@@ -5,7 +5,7 @@ import Link from "next/link";
 import { type FormEvent, useState } from "react";
 
 const HERO_IMAGE =
-  "https://images.unsplash.com/photo-1573497019840-805888101a67?auto=format&fit=crop&w=1600&q=85";
+  "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=1600&q=85";
 
 const servicePillars = [
   {
