@@ -1,6 +1,8 @@
 "use client";
 
-import { type FormEvent, useState } from "react";
+import { FormSubmitStatus } from "@/components/landing/FormSubmitStatus";
+import { useContactForm } from "@/hooks/use-contact-form";
+import { mapCallCenterJobsForm } from "@/lib/form-payload-mappers";
 
 const positions = [
   { value: "csr", label: "CSR (Call Center Representative)" },
@@ -33,12 +35,10 @@ function hearFieldName(label: string) {
 }
 
 export function CallCenterJobsPage() {
-  const [sent, setSent] = useState(false);
-
-  function onSubmit(e: FormEvent<HTMLFormElement>) {
-    e.preventDefault();
-    setSent(true);
-  }
+  const { sent, submitting, error, onSubmit } = useContactForm({
+    source: "call-center-jobs",
+    mapPayload: (formData) => mapCallCenterJobsForm(formData),
+  });
 
   return (
     <div className="relative overflow-hidden border-b border-border bg-gradient-to-br from-primary-soft/70 via-white to-surface">
@@ -256,22 +256,29 @@ export function CallCenterJobsPage() {
           <div className="flex flex-col gap-4 border-t border-border/70 pt-2 sm:flex-row sm:items-center sm:justify-between">
             <button
               type="submit"
-              className="inline-flex w-full items-center justify-center rounded-xl bg-primary px-8 py-3.5 text-sm font-semibold text-white shadow-md shadow-primary/25 transition hover:bg-primary-dark sm:w-auto"
+              disabled={submitting || sent}
+              className="inline-flex w-full items-center justify-center rounded-xl bg-primary px-8 py-3.5 text-sm font-semibold text-white shadow-md shadow-primary/25 transition hover:bg-primary-dark disabled:cursor-not-allowed disabled:opacity-60 sm:w-auto"
             >
-              Submit application
+              {submitting ? "Sending…" : "Submit application"}
             </button>
             {sent ? (
               <p
                 className="text-center text-sm font-medium text-primary sm:text-right"
                 role="status"
               >
-                Thanks — this demo does not post to a server yet.
+                Thanks! We received your application and will contact shortlisted
+                candidates.
               </p>
             ) : (
               <p className="text-center text-xs text-muted sm:text-right">
                 We will contact shortlisted candidates by phone or email.
               </p>
             )}
+            <FormSubmitStatus
+              sent={false}
+              error={error}
+              className="text-center text-sm sm:col-span-2 sm:text-right"
+            />
           </div>
         </form>
       </div>

@@ -2,7 +2,9 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { type FormEvent, useState } from "react";
+import { useContactForm } from "@/hooks/use-contact-form";
+import { mapStandardContactForm } from "@/lib/form-payload-mappers";
+import { FormSubmitStatus } from "@/components/landing/FormSubmitStatus";
 
 const HERO_IMAGE =
   "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1600&q=85";
@@ -84,12 +86,10 @@ const fieldClass =
   "mt-2 w-full rounded-xl border border-border/90 bg-white px-4 py-3 text-[15px] text-foreground shadow-[inset_0_1px_2px_rgba(15,23,42,0.06)] outline-none transition placeholder:text-muted/60 focus:border-primary focus:ring-[3px] focus:ring-primary/15";
 
 export function TaxiAnsweringServicesPage() {
-  const [sent, setSent] = useState(false);
-
-  function onSubmit(e: FormEvent<HTMLFormElement>) {
-    e.preventDefault();
-    setSent(true);
-  }
+  const { sent, submitting, error, onSubmit } = useContactForm({
+    source: "taxi-answering",
+    mapPayload: mapStandardContactForm,
+  });
 
   return (
     <>
@@ -283,16 +283,13 @@ export function TaxiAnsweringServicesPage() {
                 </div>
                 <button
                   type="submit"
-                  className="mt-8 inline-flex w-full items-center justify-center gap-2 rounded-xl bg-primary px-8 py-3.5 text-sm font-semibold text-white transition hover:bg-primary-dark sm:w-auto"
+                  disabled={submitting || sent}
+                  className="mt-8 inline-flex w-full items-center justify-center gap-2 rounded-xl bg-primary px-8 py-3.5 text-sm font-semibold text-white transition hover:bg-primary-dark disabled:cursor-not-allowed disabled:opacity-60 sm:w-auto"
                 >
-                  Submit
+                  {submitting ? "Sending…" : "Submit"}
                   <ArrowRightIcon className="size-4" />
                 </button>
-                {sent ? (
-                  <p className="mt-4 text-sm text-muted" role="status">
-                    Thanks — connect your CRM or inbox to store submissions.
-                  </p>
-                ) : null}
+                <FormSubmitStatus sent={sent} error={error} />
               </form>
             </div>
             <aside className="lg:col-span-5">

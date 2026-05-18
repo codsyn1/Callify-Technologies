@@ -1,14 +1,14 @@
 "use client";
 
-import { FormEvent, useState } from "react";
+import { FormSubmitStatus } from "@/components/landing/FormSubmitStatus";
+import { useContactForm } from "@/hooks/use-contact-form";
+import { mapStandardContactForm } from "@/lib/form-payload-mappers";
 
 export function CtaForm() {
-  const [sent, setSent] = useState(false);
-
-  function onSubmit(e: FormEvent<HTMLFormElement>) {
-    e.preventDefault();
-    setSent(true);
-  }
+  const { sent, submitting, error, onSubmit } = useContactForm({
+    source: "home-cta",
+    mapPayload: mapStandardContactForm,
+  });
 
   return (
     <section id="quote" className="bg-white py-16 sm:py-20">
@@ -60,16 +60,16 @@ export function CtaForm() {
             </label>
             <button
               type="submit"
-              className="mt-6 w-full rounded-md bg-primary py-3 text-sm font-semibold text-white transition hover:bg-primary-dark sm:w-auto sm:px-10"
+              disabled={submitting || sent}
+              className="mt-6 w-full rounded-md bg-primary py-3 text-sm font-semibold text-white transition hover:bg-primary-dark disabled:cursor-not-allowed disabled:opacity-60 sm:w-auto sm:px-10"
             >
-              Submit
+              {submitting ? "Sending…" : "Submit"}
             </button>
-            {sent ? (
-              <p className="mt-4 text-sm font-medium text-primary" role="status">
-                Thanks—this demo form does not post to a server yet; wire your
-                API or form provider here.
-              </p>
-            ) : null}
+            <FormSubmitStatus
+              sent={sent}
+              error={error}
+              className="mt-4 text-sm font-medium"
+            />
           </form>
         </div>
       </div>

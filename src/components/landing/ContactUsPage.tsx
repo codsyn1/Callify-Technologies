@@ -2,7 +2,8 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { type FormEvent, useState } from "react";
+import { useContactForm } from "@/hooks/use-contact-form";
+import { mapStandardContactForm } from "@/lib/form-payload-mappers";
 
 /** Hero visual — professional workspace (Unsplash) */
 const HERO_IMAGE =
@@ -29,54 +30,10 @@ const fieldClass =
   "mt-2 w-full rounded-xl border border-border/90 bg-white px-4 py-3 text-[15px] text-foreground shadow-[inset_0_1px_2px_rgba(15,23,42,0.06)] outline-none transition placeholder:text-muted/60 focus:border-primary focus:ring-[3px] focus:ring-primary/15";
 
 export function ContactUsPage() {
-  const [sent, setSent] = useState(false);
-  const [submitting, setSubmitting] = useState(false);
-  const [error, setError] = useState<string | null>(null);
-
-  async function onSubmit(e: FormEvent<HTMLFormElement>) {
-    e.preventDefault();
-    setError(null);
-    setSubmitting(true);
-
-    const form = e.currentTarget;
-    const formData = new FormData(form);
-
-    try {
-      const response = await fetch("/api/contact", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          name: formData.get("name"),
-          email: formData.get("email"),
-          phone: formData.get("phone") || undefined,
-          message: formData.get("message"),
-          source: "contact-us",
-        }),
-      });
-
-      const result = (await response.json()) as {
-        success?: boolean;
-        error?: string;
-      };
-
-      if (!response.ok || !result.success) {
-        setError(
-          result.error ??
-            "Something went wrong. Please try again or email info@callifytechnologies.com."
-        );
-        return;
-      }
-
-      setSent(true);
-      form.reset();
-    } catch {
-      setError(
-        "Network error. Please try again or email info@callifytechnologies.com."
-      );
-    } finally {
-      setSubmitting(false);
-    }
-  }
+  const { sent, submitting, error, onSubmit } = useContactForm({
+    source: "contact-us",
+    mapPayload: mapStandardContactForm,
+  });
 
   return (
     <>

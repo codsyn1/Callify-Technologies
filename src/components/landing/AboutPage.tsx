@@ -2,7 +2,9 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { type FormEvent, useState } from "react";
+import { FormSubmitStatus } from "@/components/landing/FormSubmitStatus";
+import { useContactForm } from "@/hooks/use-contact-form";
+import { mapStandardContactForm } from "@/lib/form-payload-mappers";
 
 const HERO_IMAGE =
   "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1400&q=85";
@@ -41,12 +43,10 @@ const fieldClass =
   "mt-2 w-full rounded-xl border border-border/90 bg-white px-4 py-3 text-[15px] text-foreground shadow-[inset_0_1px_2px_rgba(15,23,42,0.06)] outline-none transition placeholder:text-muted/60 focus:border-primary focus:ring-[3px] focus:ring-primary/15";
 
 export function AboutPage() {
-  const [sent, setSent] = useState(false);
-
-  function onSubmit(e: FormEvent<HTMLFormElement>) {
-    e.preventDefault();
-    setSent(true);
-  }
+  const { sent, submitting, error, onSubmit } = useContactForm({
+    source: "about",
+    mapPayload: mapStandardContactForm,
+  });
 
   return (
     <>
@@ -344,9 +344,10 @@ export function AboutPage() {
                 </div>
                 <button
                   type="submit"
-                  className="group mt-8 inline-flex w-full items-center justify-center gap-2 rounded-xl bg-primary px-8 py-3.5 text-sm font-semibold text-white transition hover:bg-primary-dark sm:w-auto"
+                  disabled={submitting || sent}
+                  className="group mt-8 inline-flex w-full items-center justify-center gap-2 rounded-xl bg-primary px-8 py-3.5 text-sm font-semibold text-white transition hover:bg-primary-dark disabled:cursor-not-allowed disabled:opacity-60 sm:w-auto"
                 >
-                  Submit
+                  {submitting ? "Sending…" : "Submit"}
                   <ArrowRightIcon className="size-4 opacity-90 transition group-hover:translate-x-0.5" />
                 </button>
                 {sent ? (
@@ -358,12 +359,12 @@ export function AboutPage() {
                       <CheckIcon className="size-4" />
                     </span>
                     <p>
-                      <span className="font-semibold">Thanks.</span> This demo
-                      does not post to a server yet—connect your API or inbox
-                      integration here.
+                      <span className="font-semibold">Thanks.</span> We received
+                      your message and will be in touch soon.
                     </p>
                   </div>
                 ) : null}
+                <FormSubmitStatus sent={false} error={error} className="mt-4" />
               </form>
             </div>
 

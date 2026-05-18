@@ -1,7 +1,9 @@
 "use client";
 
 import Image from "next/image";
-import { type FormEvent, useState } from "react";
+import { FormSubmitStatus } from "@/components/landing/FormSubmitStatus";
+import { useContactForm } from "@/hooks/use-contact-form";
+import { mapQuoteRequestForm } from "@/lib/form-payload-mappers";
 
 /** Team collaboration — background photo */
 const QUOTE_BG_SRC =
@@ -29,12 +31,10 @@ const highlights = [
 ];
 
 export function RequestQuoteSection() {
-  const [sent, setSent] = useState(false);
-
-  function onSubmit(e: FormEvent<HTMLFormElement>) {
-    e.preventDefault();
-    setSent(true);
-  }
+  const { sent, submitting, error, onSubmit } = useContactForm({
+    source: "request-a-quote",
+    mapPayload: (formData) => mapQuoteRequestForm(formData),
+  });
 
   return (
     <section className="relative isolate overflow-hidden">
@@ -163,10 +163,11 @@ export function RequestQuoteSection() {
 
                   <button
                     type="submit"
-                    className="group relative w-full overflow-hidden rounded-xl bg-primary py-3.5 text-sm font-semibold text-white shadow-lg shadow-primary/25 transition hover:bg-primary-dark sm:w-auto sm:min-w-[200px] sm:px-10"
+                    disabled={submitting || sent}
+                    className="group relative w-full overflow-hidden rounded-xl bg-primary py-3.5 text-sm font-semibold text-white shadow-lg shadow-primary/25 transition hover:bg-primary-dark disabled:cursor-not-allowed disabled:opacity-60 sm:w-auto sm:min-w-[200px] sm:px-10"
                   >
                     <span className="relative z-10 inline-flex items-center justify-center gap-2">
-                      Send request
+                      {submitting ? "Sending…" : "Send request"}
                       <ArrowRightIcon className="size-4 transition group-hover:translate-x-0.5" />
                     </span>
                   </button>
@@ -180,11 +181,12 @@ export function RequestQuoteSection() {
                         <CheckIcon className="size-4" />
                       </span>
                       <p>
-                        <span className="font-semibold">Received.</span> This demo
-                        does not save your data yet—connect your CRM or API next.
+                        <span className="font-semibold">Received.</span> We will
+                        follow up with a tailored recommendation soon.
                       </p>
                     </div>
                   ) : null}
+                  <FormSubmitStatus sent={false} error={error} />
                 </form>
               </div>
             </div>

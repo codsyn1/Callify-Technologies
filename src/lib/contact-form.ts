@@ -30,8 +30,12 @@ export function parseContactFormBody(
     return { error: "Please enter your name." };
   }
 
-  if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email) || email.length > 320) {
-    return { error: "Please enter a valid email address." };
+  if (email) {
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email) || email.length > 320) {
+      return { error: "Please enter a valid email address." };
+    }
+  } else if (!phone) {
+    return { error: "Please enter a valid email address or phone number." };
   }
 
   if (!message || message.length > 5000) {
