@@ -232,7 +232,7 @@ export function RequestQuoteSection() {
                 </div>
                 <div className="hidden h-12 w-px bg-white/25 sm:block" aria-hidden />
                 <p className="max-w-[200px] text-xs leading-relaxed text-white/85 sm:text-sm">
-                  Coverage window aligned for your timezone:{" "}
+                  Working hours:{" "}
                   <span className="whitespace-nowrap font-semibold text-white">
                     8pm – 6am
                   </span>

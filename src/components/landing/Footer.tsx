@@ -1,3 +1,4 @@
+import { SocialIcons } from "@/components/landing/SocialIcons";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -9,11 +10,10 @@ export function Footer() {
           <div>
             <Link href="/" className="inline-block leading-none">
               <Image
-                src="/callify-logo.png"
+                src="/callify-logo-dark.png"
                 alt="Callify Technologies"
                 width={1063}
                 height={383}
-                sizes="(max-width: 768px) 280px, (max-width: 1024px) 340px, 400px"
                 className="h-16 w-auto sm:h-[4.75rem] lg:h-[5.25rem]"
               />
             </Link>
@@ -22,6 +22,10 @@ export function Footer() {
               brand standards, Callify Technologies is built to execute with
               clarity and care.
             </p>
+            <SocialIcons
+              className="mt-5"
+              iconClassName="border-white/20 bg-white/5 hover:border-white/40 hover:bg-white/10"
+            />
             <div className="mt-4 flex flex-col gap-2">
               <Link
                 href="/about"
@@ -43,12 +47,12 @@ export function Footer() {
             </p>
             <ul className="mt-4 space-y-2 text-sm text-white/80">
               <li>
-                <Link href="#services" className="hover:text-white">
+                <Link href="/#services" className="hover:text-white">
                   Outbound call center
                 </Link>
               </li>
               <li>
-                <Link href="#services" className="hover:text-white">
+                <Link href="/#services" className="hover:text-white">
                   Inbound call center
                 </Link>
               </li>

@@ -1,5 +1,7 @@
 "use client";
 
+import { SocialIcons } from "@/components/landing/SocialIcons";
+import { WORKING_HOURS } from "@/lib/site";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
@@ -44,7 +46,7 @@ const outboundLinks = [
     href: "/call-center-services/outbound/appointment-setting-services",
     label: "Appointment setting",
   },
-  { href: "#services", label: "Call back services" },
+  { href: "/#services", label: "Call back services" },
   {
     href: "/call-center-services/outbound/lead-generation",
     label: "Lead generation",
@@ -95,17 +97,18 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 border-b border-border bg-white/95 shadow-sm backdrop-blur">
       <div className="border-b border-primary/10 bg-primary text-[13px] text-white">
-        <div className="mx-auto flex max-w-7xl flex-col gap-1 px-4 py-1.5 sm:flex-row sm:items-center sm:justify-between sm:gap-2">
+        <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-2 px-4 py-1.5 sm:grid-cols-[1fr_auto_1fr] sm:gap-3">
           <a
             href="mailto:info@callifytechnologies.com"
-            className="font-medium hover:underline"
+            className="justify-self-center font-medium hover:underline sm:justify-self-start"
           >
             info@callifytechnologies.com
           </a>
-          <p className="text-white/90">
-            Working hours: <span className="font-semibold">8pm – 6am</span> (your
-            coverage window)
+          <p className="justify-self-center text-center text-white/90">
+            Working hours:{" "}
+            <span className="font-semibold tabular-nums">{WORKING_HOURS}</span>
           </p>
+          <SocialIcons className="justify-self-center sm:justify-self-end" />
         </div>
       </div>
 
@@ -201,7 +204,7 @@ export function Header() {
 
           <div className="group relative">
             <Link
-              href="#industries"
+              href="/#industries"
               className="flex items-center gap-1 rounded-md px-3 py-1.5 text-sm font-medium hover:bg-primary-soft"
             >
               Industries

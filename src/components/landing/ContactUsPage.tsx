@@ -80,69 +80,64 @@ export function ContactUsPage() {
 
   return (
     <>
-      <section className="relative overflow-hidden border-b border-border bg-gradient-to-br from-primary-soft/80 via-white to-primary-soft/40">
+      <section className="relative isolate overflow-hidden border-b border-border bg-gradient-to-br from-primary-soft/75 via-white to-surface">
         <div
-          className="pointer-events-none absolute -left-32 top-1/4 h-72 w-72 rounded-full bg-primary/[0.12] blur-3xl"
+          className="pointer-events-none absolute -left-32 top-1/4 h-80 w-80 rounded-full bg-primary/[0.12] blur-3xl"
           aria-hidden
         />
         <div
           className="pointer-events-none absolute -right-24 top-0 h-96 w-96 rounded-full bg-primary/10 blur-3xl"
           aria-hidden
         />
-        <div className="relative mx-auto max-w-7xl px-4 py-16 sm:py-20 lg:py-24">
-          <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-14 xl:gap-16">
-            <div className="min-w-0">
-              <span className="inline-flex rounded-full border border-primary/15 bg-white/80 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.2em] text-primary shadow-sm backdrop-blur-sm">
-                Contact us anytime
-              </span>
-              <h1 className="mt-6 max-w-xl text-3xl font-bold tracking-tight text-foreground sm:text-4xl lg:text-[2.65rem] lg:leading-[1.12] xl:max-w-2xl">
-                Let&apos;s talk about your contact center goals
-              </h1>
-              <p className="mt-5 max-w-xl text-base leading-relaxed text-muted sm:text-lg">
-                Whether you need a fast email response or a full program review,
-                our team is ready to listen and point you in the right direction.
-              </p>
-              <div className="mt-10 flex flex-wrap items-center gap-3">
-                <Link
-                  href="/request-a-quote"
-                  className="group inline-flex items-center justify-center gap-2 rounded-xl bg-primary px-7 py-3.5 text-sm font-semibold text-white transition hover:bg-primary-dark"
-                >
-                  Get a quote
-                  <ArrowRightIcon className="size-4 transition group-hover:translate-x-0.5" />
-                </Link>
-                <a
-                  href="mailto:info@callifytechnologies.com"
-                  className="inline-flex items-center justify-center gap-2 rounded-xl border border-border bg-white px-7 py-3.5 text-sm font-semibold text-foreground transition hover:border-primary/30 hover:bg-primary-soft/50"
-                >
-                  <MailIcon className="size-4 text-primary" />
-                  Email us
-                </a>
-              </div>
+        <div className="relative mx-auto grid max-w-7xl items-center gap-10 px-4 py-14 lg:grid-cols-2 lg:gap-14 lg:py-20">
+          <div className="min-w-0">
+            <span className="inline-flex rounded-full border border-primary/15 bg-white/80 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.2em] text-primary shadow-sm">
+              Contact us anytime
+            </span>
+            <h1 className="mt-5 text-3xl font-bold tracking-tight text-foreground sm:text-4xl lg:text-[2.35rem] lg:leading-[1.12]">
+              Let&apos;s talk about your contact center goals
+            </h1>
+            <p className="mt-5 max-w-xl text-base leading-relaxed text-muted sm:text-lg">
+              Whether you need a fast email response or a full program review,
+              our team is ready to listen and point you in the right direction.
+            </p>
+            <div className="mt-9 flex flex-wrap items-center gap-3">
+              <Link
+                href="/request-a-quote"
+                className="group inline-flex items-center justify-center gap-2 rounded-xl bg-primary px-7 py-3.5 text-sm font-semibold text-white shadow-lg shadow-primary/25 transition hover:bg-primary-dark"
+              >
+                Get a quote
+                <ArrowRightIcon className="size-4 transition group-hover:translate-x-0.5" />
+              </Link>
+              <a
+                href="mailto:info@callifytechnologies.com"
+                className="inline-flex items-center justify-center gap-2 rounded-xl border border-border bg-white px-7 py-3.5 text-sm font-semibold text-foreground transition hover:border-primary/30 hover:bg-primary-soft/50"
+              >
+                <MailIcon className="size-4 text-primary" />
+                Email us
+              </a>
             </div>
+          </div>
 
-            <div className="relative mx-auto w-full max-w-lg lg:mx-0 lg:max-w-none">
+          <div className="relative mx-auto w-full max-w-lg lg:mx-0 lg:max-w-none">
+            <div
+              className="pointer-events-none absolute -inset-1 rounded-[1.75rem] bg-gradient-to-br from-primary/25 via-primary/5 to-transparent opacity-90 blur-md"
+              aria-hidden
+            />
+            <figure className="relative aspect-[5/4] overflow-hidden rounded-3xl border border-white/60 bg-white shadow-[0_28px_60px_-28px_rgba(65,116,185,0.35)] ring-1 ring-primary/10 sm:aspect-[4/3]">
+              <Image
+                src={HERO_IMAGE}
+                alt="Team collaborating in a professional office"
+                fill
+                priority
+                className="object-cover object-[center_20%]"
+                sizes="(max-width: 1024px) 100vw, 50vw"
+              />
               <div
-                className="pointer-events-none absolute -inset-1 rounded-[1.75rem] bg-gradient-to-br from-primary/25 via-primary/5 to-transparent opacity-80 blur-md sm:-inset-2 sm:rounded-[2rem]"
+                className="pointer-events-none absolute inset-0 bg-gradient-to-tr from-primary/20 via-transparent to-transparent"
                 aria-hidden
               />
-              <figure className="relative aspect-[5/4] overflow-hidden rounded-3xl border border-white/60 bg-white shadow-[0_28px_60px_-28px_rgba(65,116,185,0.35)] ring-1 ring-primary/10 sm:aspect-[4/3] lg:aspect-[4/5] lg:rounded-[1.75rem]">
-                <Image
-                  src={HERO_IMAGE}
-                  alt="Team collaborating in a professional office"
-                  fill
-                  priority
-                  className="object-cover object-[center_20%]"
-                  sizes="(max-width: 1024px) 100vw, 50vw"
-                />
-                <div
-                  className="pointer-events-none absolute inset-0 bg-gradient-to-tr from-primary/25 via-transparent to-transparent"
-                  aria-hidden
-                />
-                <figcaption className="pointer-events-none absolute bottom-0 left-0 right-0 bg-gradient-to-t from-foreground/50 to-transparent px-5 pb-4 pt-16 text-xs font-medium text-white/90">
-                  Partnership-led delivery for your brand
-                </figcaption>
-              </figure>
-            </div>
+            </figure>
           </div>
         </div>
       </section>
@@ -156,7 +151,7 @@ export function ContactUsPage() {
             <div className="mt-3 h-1 w-12 rounded-full bg-primary" aria-hidden />
             <p className="mt-4 text-base leading-relaxed text-muted">
               Delivery anchored to your brand standards—with teams aligned to
-              your coverage window.
+              your operating hours.
             </p>
           </div>
 
@@ -196,12 +191,11 @@ export function ContactUsPage() {
                   </div>
                   <div className="sm:border-l sm:border-primary/15 sm:pl-8">
                     <p className="text-[11px] font-bold uppercase tracking-[0.18em] text-primary">
-                      Coverage window
+                      Working hours
                     </p>
                     <p className="mt-2 text-lg font-semibold tabular-nums text-foreground">
                       8pm – 6am
                     </p>
-                    <p className="mt-1 text-sm text-muted">Your timezone</p>
                   </div>
                 </div>
               </div>

@@ -15,30 +15,55 @@ const HEADERS = [
   "Source",
 ] as const;
 
+function normalizePrivateKey(key: string) {
+  return key.replace(/\\n/g, "\n").trim();
+}
+
+function parseServiceAccountJson(raw: string): {
+  client_email?: string;
+  private_key?: string;
+} | null {
+  let jsonStr = raw.trim();
+
+  // Optional: paste base64-encoded JSON on Vercel if quotes break
+  if (!jsonStr.startsWith("{")) {
+    try {
+      jsonStr = Buffer.from(jsonStr, "base64").toString("utf8");
+    } catch {
+      return null;
+    }
+  }
+
+  try {
+    return JSON.parse(jsonStr) as {
+      client_email?: string;
+      private_key?: string;
+    };
+  } catch {
+    return null;
+  }
+}
+
 function getServiceAccountCredentials():
   | { client_email: string; private_key: string }
   | null {
   const jsonRaw = process.env.GOOGLE_SERVICE_ACCOUNT_JSON?.trim();
   if (jsonRaw) {
-    try {
-      const parsed = JSON.parse(jsonRaw) as {
-        client_email?: string;
-        private_key?: string;
+    const parsed = parseServiceAccountJson(jsonRaw);
+    if (parsed?.client_email && parsed?.private_key) {
+      return {
+        client_email: parsed.client_email,
+        private_key: normalizePrivateKey(parsed.private_key),
       };
-      if (parsed.client_email && parsed.private_key) {
-        return {
-          client_email: parsed.client_email,
-          private_key: parsed.private_key,
-        };
-      }
-    } catch {
-      console.error("GOOGLE_SERVICE_ACCOUNT_JSON is invalid JSON.");
-      return null;
     }
+    console.error("GOOGLE_SERVICE_ACCOUNT_JSON is missing client_email or private_key.");
+    return null;
   }
 
   const email = process.env.GOOGLE_SERVICE_ACCOUNT_EMAIL?.trim();
-  const privateKey = process.env.GOOGLE_PRIVATE_KEY?.replace(/\\n/g, "\n").trim();
+  const privateKey = process.env.GOOGLE_PRIVATE_KEY
+    ? normalizePrivateKey(process.env.GOOGLE_PRIVATE_KEY)
+    : undefined;
 
   if (email && privateKey) {
     return { client_email: email, private_key: privateKey };
