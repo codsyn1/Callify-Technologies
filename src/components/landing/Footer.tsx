@@ -22,6 +22,12 @@ export function Footer() {
               brand standards, Callify Technologies is built to execute with
               clarity and care.
             </p>
+            <a
+              href="mailto:info@callifytechnologies.com"
+              className="mt-4 inline-block text-sm font-semibold text-white underline decoration-white/35 underline-offset-4 transition hover:decoration-white"
+            >
+              info@callifytechnologies.com
+            </a>
             <SocialIcons
               className="mt-5"
               iconClassName="border-white/20 bg-white/5 hover:border-white/40 hover:bg-white/10"
@@ -130,14 +136,6 @@ export function Footer() {
                 <Link href="/request-a-quote" className="hover:text-white">
                   Book a discovery call
                 </Link>
-              </li>
-              <li>
-                <a
-                  href="mailto:info@callifytechnologies.com"
-                  className="hover:text-white"
-                >
-                  info@callifytechnologies.com
-                </a>
               </li>
             </ul>
           </div>
