@@ -13,7 +13,7 @@ export function WhoWeAre() {
           contact center programs, helping businesses grow across insurance,
           healthcare, real estate, financial services, and technology. From
           qualified leads and sales support to dependable customer care, we
-          tailor playbooks, QA, and reporting to your brand.
+          tailor playback, QA, and reporting to your brand.
         </p>
         <p className="mt-4 max-w-3xl text-lg leading-relaxed text-muted">
           Our team of trained representatives ensures every interaction

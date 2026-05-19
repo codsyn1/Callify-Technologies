@@ -99,7 +99,7 @@ const testimonials = [
 const faqs = [
   {
     q: "What are the benefits of Callify’s IT call center services?",
-    a: "Trained agents, 24/7 coverage options, ticketing integrations, and playbooks that reduce repeat contacts—plus flexible pricing aligned to ticket volume and channels.",
+    a: "Trained agents, 24/7 coverage options, ticketing integrations, and playback that reduce repeat contacts—plus flexible pricing aligned to ticket volume and channels.",
   },
   {
     q: "How can we be confident in service quality?",

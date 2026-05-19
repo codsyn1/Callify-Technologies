@@ -74,7 +74,7 @@ const faqs = [
   },
   {
     q: "What experience does your team bring?",
-    a: "Cross-industry work in finance, real estate, healthcare, retail, and tech—with playbooks adapted to each client’s ICP and compliance needs.",
+    a: "Cross-industry work in finance, real estate, healthcare, retail, and tech—with playback adapted to each client’s ICP and compliance needs.",
   },
   {
     q: "How much does it cost?",

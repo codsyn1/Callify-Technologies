@@ -22,7 +22,7 @@ const solutions = [
   },
   {
     title: "Proven delivery portfolio",
-    body: "Programs across cards, lending, insurance adjacency, and B2B finance—documented playbooks, not one-off experiments.",
+    body: "Programs across cards, lending, insurance adjacency, and B2B finance—documented playback, not one-off experiments.",
     icon: ShieldIcon,
   },
   {

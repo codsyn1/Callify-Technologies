@@ -333,7 +333,7 @@ export function DigitalMarketingPage() {
             Digital marketing methodologies
           </h3>
           <p className="mt-3 text-base leading-relaxed text-muted">
-            We use current playbooks to navigate competitive markets—skilled
+            We use current playback to navigate competitive markets—skilled
             specialists align tactics to your goals and measure what matters.
           </p>
 

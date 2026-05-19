@@ -17,25 +17,18 @@ const stats = [
 
 const team = [
   {
-    name: "Alex Morgan",
+    name: "Haris Bin Tariq",
     role: "Chief Executive Officer",
     bio: "Focused on building Callify on strong foundations—client commitment, disciplined operations, and steady innovation as markets evolve.",
     skills: ["Entrepreneur", "Sales leadership", "Strategy", "Team building"],
-    initials: "AM",
+    initials: "HBT",
   },
   {
-    name: "Jordan Lee",
-    role: "Chief Financial Officer",
+    name: "Ali Raza Khan",
+    role: "Director",
     bio: "Works to keep growth responsible and measurable, aligning resourcing and outcomes so customers receive dependable value at every stage.",
     skills: ["Risk management", "Operations finance", "Planning", "Punctuality"],
-    initials: "JL",
-  },
-  {
-    name: "Sam Rivera",
-    role: "General Manager",
-    bio: "Ensures smooth performance across teams—clear priorities, strong coordination, and consistent quality from onboarding through daily delivery.",
-    skills: ["Strategy", "Decision making", "Team building", "Conflict resolution"],
-    initials: "SR",
+    initials: "AK",
   },
 ];
 
@@ -210,7 +203,7 @@ export function AboutPage() {
             </p>
           </div>
 
-          <div className="mt-12 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-12 grid gap-8 md:grid-cols-2">
             {team.map((m) => (
               <article
                 key={m.name}
