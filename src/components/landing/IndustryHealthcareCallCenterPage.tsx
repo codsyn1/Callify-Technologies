@@ -387,7 +387,7 @@ export function IndustryHealthcareCallCenterPage() {
                       Next step
                     </p>
                     <p className="mx-auto mt-3 max-w-[18rem] text-lg font-bold leading-snug">
-                      Complete the form to get to know about us
+                      Complete the form to get to know us
                     </p>
                   </div>
                   <ul className="divide-y divide-border/60 p-2">
@@ -421,7 +421,7 @@ export function IndustryHealthcareCallCenterPage() {
           </h2>
           <div className="mt-3 h-1 w-12 rounded-full bg-primary" aria-hidden />
           <p className="mt-4 text-base leading-relaxed text-muted">
-            Healthcare is holistic: access, billing, and emotional support all
+            Patient care is holistic—access, billing, and emotional support all
             shape recovery. These answers explain how Callify partners with your
             clinical and IT stakeholders.
           </p>

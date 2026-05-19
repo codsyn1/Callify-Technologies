@@ -36,7 +36,7 @@ const servicePillars = [
     icon: HeartIcon,
   },
   {
-    title: "24/7 easy to access",
+    title: "24/7 easy access",
     body: "Flexible coverage and packages aligned to your campaign calendar—no waiting days for a callback on pipeline.",
     icon: ClockIcon,
   },
@@ -313,7 +313,7 @@ export function AppointmentSettingServicesPage() {
                       Next step
                     </p>
                     <p className="mx-auto mt-3 max-w-[18rem] text-lg font-bold leading-snug">
-                      Complete the form to get to know about us
+                      Complete the form to get to know us
                     </p>
                   </div>
                   <ul className="divide-y divide-border/60 p-2">

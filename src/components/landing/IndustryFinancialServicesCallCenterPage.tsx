@@ -22,7 +22,7 @@ const solutions = [
   },
   {
     title: "Proven delivery portfolio",
-    body: "Programs across cards, lending, insurance adjacency, and B2B finance—documented playback, not one-off experiments.",
+    body: "Programs across cards, lending, insurance-adjacent lines, and B2B finance—documented playbooks, not one-off experiments.",
     icon: ShieldIcon,
   },
   {
@@ -373,7 +373,7 @@ export function IndustryFinancialServicesCallCenterPage() {
                       Next step
                     </p>
                     <p className="mx-auto mt-3 max-w-[18rem] text-lg font-bold leading-snug">
-                      Complete the form to get to know about us
+                      Complete the form to get to know us
                     </p>
                   </div>
                   <ul className="divide-y divide-border/60 p-2">

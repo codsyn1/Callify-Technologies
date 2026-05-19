@@ -310,12 +310,12 @@ export function IndustryRealEstateCallCenterPage() {
                       Next step
                     </p>
                     <p className="mx-auto mt-3 max-w-[18rem] text-lg font-bold leading-snug">
-                      Complete the form to get to know about us
+                      Complete the form to get to know us
                     </p>
                   </div>
                   <ul className="divide-y divide-border/60 p-2">
                     {[
-                      "Speed-to-lead playback aligned to your CRM and markets.",
+                      "Speed-to-lead playbooks aligned to your CRM and markets.",
                       "QA rubrics that score empathy and accuracy—not just handle time.",
                       "Live reporting on volume, conversion assists, and backlog.",
                     ].map((line) => (

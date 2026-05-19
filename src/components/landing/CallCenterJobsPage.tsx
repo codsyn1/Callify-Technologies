@@ -8,8 +8,8 @@ const positions = [
   { value: "csr", label: "CSR (Call Center Representative)" },
   { value: "closer", label: "Closer" },
   { value: "customer-support", label: "Customer Support" },
-  { value: "non-voice", label: "Non Voice (Avatar)" },
-  { value: "hr", label: "Human Resource" },
+  { value: "non-voice", label: "Non-voice" },
+  { value: "hr", label: "Human Resources" },
   { value: "it-support", label: "IT Support" },
   { value: "graphic-designer", label: "Graphic Designer" },
   { value: "social-media", label: "Social Media Executive" },
@@ -132,14 +132,14 @@ export function CallCenterJobsPage() {
                   type="tel"
                   name="phoneNational"
                   autoComplete="tel-national"
-                  placeholder="3XX XXXXXXX"
+                  placeholder="300 1234567"
                   className="min-w-0 flex-1 border-0 bg-transparent px-4 py-3 text-[15px] text-foreground outline-none placeholder:text-muted/55"
                 />
               </div>
             </div>
             <div>
               <label className={labelClass} htmlFor="city">
-                Your city (Isb &amp; Rwp only){" "}
+                Your city (Islamabad &amp; Rawalpindi only){" "}
                 <span className="text-red-600">*</span>
               </label>
               <select
@@ -206,7 +206,7 @@ export function CallCenterJobsPage() {
                 </option>
                 <option value="yes">Yes</option>
                 <option value="no">No</option>
-                <option value="maybe">Maybe</option>
+                <option value="partial">Partially</option>
               </select>
             </div>
             <div>

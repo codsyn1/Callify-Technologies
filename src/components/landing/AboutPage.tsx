@@ -68,7 +68,7 @@ export function AboutPage() {
         <div className="relative z-10 mx-auto flex w-full max-w-7xl flex-1 flex-col justify-center px-4 py-16 sm:py-20 lg:py-24">
           <div className="max-w-2xl">
             <span className="inline-flex rounded-full border border-white/30 bg-white/12 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.2em] text-white shadow-sm backdrop-blur-md">
-              Best results delivery
+              Best-in-class delivery
             </span>
             <h1 className="mt-4 text-3xl font-bold tracking-tight text-white drop-shadow-sm sm:mt-5 sm:text-4xl lg:text-[2.5rem] lg:leading-[1.12]">
               About Callify Technologies
@@ -101,7 +101,7 @@ export function AboutPage() {
           <div className="grid gap-12 lg:grid-cols-2 lg:items-start lg:gap-16">
             <div>
               <h2 className="text-2xl font-bold tracking-tight text-foreground sm:text-3xl">
-                Who we are?
+                Who we are
               </h2>
               <div className="mt-3 h-1 w-12 rounded-full bg-primary" aria-hidden />
               <p className="mt-6 text-base leading-relaxed text-muted sm:text-lg">
@@ -373,14 +373,14 @@ export function AboutPage() {
                       Next step
                     </p>
                     <p className="relative mx-auto mt-4 max-w-[18rem] text-lg font-bold leading-snug text-white sm:text-xl">
-                      Complete the form to get to know about us
+                      Complete the form to get to know us
                     </p>
                   </div>
                   <ul className="divide-y divide-border/60 p-2">
                     {[
                       "We reply within one business day for qualified inquiries.",
                       "Share volumes, channels, and compliance needs for a sharper response.",
-                      "Want a fuller brief? Use Get a quote for structured intake.",
+                      "Want a fuller brief? Use Request a quote for structured intake.",
                     ].map((line) => (
                       <li
                         key={line}

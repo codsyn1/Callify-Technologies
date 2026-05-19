@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import Image from "next/image";
 import Link from "next/link";
@@ -44,7 +44,7 @@ const outboundLinks = [
     href: "/call-center-services/outbound/appointment-setting-services",
     label: "Appointment setting",
   },
-  { href: "/#services", label: "Call back services" },
+  { href: "/#services", label: "Callback services" },
   {
     href: "/call-center-services/outbound/lead-generation",
     label: "Lead generation",
@@ -73,7 +73,7 @@ const industryLinks = [
 
 const resourceLinks = [
   { href: "/call-center-jobs", label: "Jobs" },
-  { href: "/blog", label: "Blogs" },
+  { href: "/blog", label: "Blog" },
 ];
 
 type MobilePanel =

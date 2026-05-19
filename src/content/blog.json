@@ -70,7 +70,7 @@
         }
       ],
       "takeaway": {
-        "title": "Take away",
+        "title": "Takeaway",
         "paragraphs": [
           "Chatbots work best as part of a system: intents, guardrails, analytics, and human escalation. If you invest in those foundations, you should see measurable improvements in speed, consistency, and agent focus.",
           "For live-heavy programs, pair automation with professional chat support services so customers always have a credible path to a person."
@@ -124,13 +124,13 @@
           "title": "What operators should know",
           "level": 2,
           "paragraphs": [
-            "A strong partner brings playback, tooling, and reporting templates that would take quarters to mature internally.",
+            "A strong partner brings playbooks, tooling, and reporting templates that would take quarters to mature internally.",
             "The best programs still retain brand ownership onshore: scripts, QA rubrics, and escalation rules remain yours; the partner executes with discipline."
           ]
         }
       ],
       "takeaway": {
-        "title": "Take away",
+        "title": "Takeaway",
         "paragraphs": [
           "Outsourcing should tighten your operating rhythm, not dilute your brand. Pick partners who can show QA, security, and governance—not just a rate card."
         ]
@@ -180,9 +180,9 @@
         }
       ],
       "takeaway": {
-        "title": "Take away",
+        "title": "Takeaway",
         "paragraphs": [
-          "Treat outsourcing like a product partnership: define outcomes, review quality weekly, and iterate playback together."
+          "Treat outsourcing like a product partnership: define outcomes, review quality weekly, and iterate playbooks together."
         ]
       },
       "faqs": [
@@ -230,7 +230,7 @@
         }
       ],
       "takeaway": {
-        "title": "Take away",
+        "title": "Takeaway",
         "paragraphs": [
           "Winning RFPs is less about slogans and more about evidence: references, dashboards, and a calm plan for the first 90 days."
         ]
@@ -280,7 +280,7 @@
         }
       ],
       "takeaway": {
-        "title": "Take away",
+        "title": "Takeaway",
         "paragraphs": [
           "Pick the smallest scope that protects your brand, then expand once reporting proves stability."
         ]
@@ -330,7 +330,7 @@
         }
       ],
       "takeaway": {
-        "title": "Take away",
+        "title": "Takeaway",
         "paragraphs": [
           "A strong BPO relationship is measured in outcomes: QA scores, compliance, and customer sentiment—not seat counts alone."
         ]
@@ -380,7 +380,7 @@
         }
       ],
       "takeaway": {
-        "title": "Take away",
+        "title": "Takeaway",
         "paragraphs": [
           "Match tooling, staffing, and QA to the type of center you run—hybrid programs fail when one side is under-managed."
         ]
@@ -430,7 +430,7 @@
         }
       ],
       "takeaway": {
-        "title": "Take away",
+        "title": "Takeaway",
         "paragraphs": [
           "Treat your contact center as a feedback engine: disposition data should influence product, billing, and policy teams."
         ]
@@ -480,7 +480,7 @@
         }
       ],
       "takeaway": {
-        "title": "Take away",
+        "title": "Takeaway",
         "paragraphs": [
           "Be explicit about motion in your scope: tooling, KPIs, and coaching models differ materially between inside and outside sales support."
         ]
@@ -488,7 +488,7 @@
       "faqs": [
         {
           "question": "Can one vendor do both?",
-          "answer": "Sometimes, but the playback differ—ask for references that match your dominant motion."
+          "answer": "Sometimes, but the playbooks differ—ask for references that match your dominant motion."
         },
         {
           "question": "What KPIs fit inside sales?",
@@ -530,7 +530,7 @@
         }
       ],
       "takeaway": {
-        "title": "Take away",
+        "title": "Takeaway",
         "paragraphs": [
           "Great communication is trained, measured, and coached weekly—not assumed because agents are hired."
         ]
@@ -580,7 +580,7 @@
         }
       ],
       "takeaway": {
-        "title": "Take away",
+        "title": "Takeaway",
         "paragraphs": [
           "In healthcare, trust and clarity beat novelty—design automation to reduce risk, not impress demos."
         ]
@@ -630,7 +630,7 @@
         }
       ],
       "takeaway": {
-        "title": "Take away",
+        "title": "Takeaway",
         "paragraphs": [
           "The best US-facing programs combine operational rigor with transparent reporting—price is only one variable."
         ]
@@ -642,7 +642,7 @@
         },
         {
           "question": "What security artifacts matter?",
-          "answer": "SOC reports, access reviews, training logs, and incident response playback."
+          "answer": "SOC reports, access reviews, training logs, and incident response playbooks."
         }
       ],
       "relatedSlugs": [
@@ -680,7 +680,7 @@
         }
       ],
       "takeaway": {
-        "title": "Take away",
+        "title": "Takeaway",
         "paragraphs": [
           "Outsourcing is a contract for outcomes—write incentives so quality does not drift after go-live."
         ]
@@ -730,7 +730,7 @@
         }
       ],
       "takeaway": {
-        "title": "Take away",
+        "title": "Takeaway",
         "paragraphs": [
           "Use precise language in procurement: “BPO” and “call center” are not interchangeable scopes."
         ]
@@ -780,7 +780,7 @@
         }
       ],
       "takeaway": {
-        "title": "Take away",
+        "title": "Takeaway",
         "paragraphs": [
           "Design training and QA separately for inbound empathy and outbound compliance—they are different skills."
         ]

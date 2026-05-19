@@ -23,7 +23,7 @@ const coverageRegions = [
 const quickFacts = [
   "Dedicated reply within one business day for qualified inquiries.",
   "Share volumes, channels, and compliance needs—we’ll respond with clarity.",
-  "Prefer a structured scope? Use Get a quote for a fuller brief.",
+  "Prefer a structured scope? Use Request a quote for a fuller brief.",
 ];
 
 const fieldClass =
@@ -250,7 +250,7 @@ export function ContactUsPage() {
                       type="tel"
                       name="phone"
                       autoComplete="tel"
-                      placeholder="+1 …"
+                      placeholder="Your phone number"
                       className={fieldClass}
                     />
                   </label>
@@ -315,7 +315,7 @@ export function ContactUsPage() {
                       Why write in?
                     </p>
                     <p className="relative mx-auto mt-4 max-w-[16rem] text-lg font-bold leading-snug text-white sm:text-xl">
-                      Complete the form to get to know about us
+                      Complete the form to get to know us
                     </p>
                   </div>
                   <ul className="divide-y divide-border/60 p-2">

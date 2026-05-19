@@ -57,7 +57,7 @@ const testimonials = [
   },
   {
     quote:
-      "My online bookstore finally gets discoverable traffic. Email, SEO, and paid search are coordinated—customers find us without word-of-mouth only.",
+      "My online bookstore finally gets discoverable traffic. Email, SEO, and paid search are coordinated—customers find us, not only through word of mouth.",
     name: "Bernard Perry",
     role: "Founder, independent bookstore",
   },
@@ -288,7 +288,7 @@ export function DigitalMarketingPage() {
                       Next step
                     </p>
                     <p className="mx-auto mt-3 max-w-[18rem] text-lg font-bold leading-snug">
-                      Complete the form to get to know about us
+                      Complete the form to get to know us
                     </p>
                   </div>
                   <ul className="divide-y divide-border/60 p-2">
@@ -333,7 +333,7 @@ export function DigitalMarketingPage() {
             Digital marketing methodologies
           </h3>
           <p className="mt-3 text-base leading-relaxed text-muted">
-            We use current playback to navigate competitive markets—skilled
+            We use proven playbooks to navigate competitive markets—skilled
             specialists align tactics to your goals and measure what matters.
           </p>
 

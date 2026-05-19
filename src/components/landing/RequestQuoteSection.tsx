@@ -18,7 +18,7 @@ const phoneCodes = [
 const highlights = [
   {
     title: "Fast clarity",
-    body: "We reply with questions answered—not a generic brochure dump.",
+    body: "We reply with your questions answered—not a generic brochure dump.",
   },
   {
     title: "Aligned coverage",

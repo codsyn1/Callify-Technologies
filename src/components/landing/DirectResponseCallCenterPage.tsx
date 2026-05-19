@@ -17,7 +17,7 @@ const servicePillars = [
   },
   {
     title: "Call overflow management",
-    body: "Handle spikes without wasted calls—protect response rates and keep overhead under control.",
+    body: "Handle spikes without missed calls—protect response rates and keep overhead under control.",
     icon: ChartIcon,
   },
   {
@@ -32,7 +32,7 @@ const servicePillars = [
   },
   {
     title: "CDR cleanup & analysis",
-    body: "Reconcile call detail records and produce reports your leadership can act on—not shelf-ware.",
+    body: "Reconcile call detail records and produce reports your leadership can act on—not shelfware.",
     icon: HeartIcon,
   },
   {
@@ -78,7 +78,7 @@ const faqs = [
   },
   {
     q: "What kinds of clients do you work with?",
-    a: "From solo-agent startups to enterprise programs—every business model gets a configuration that matches volume and compliance needs.",
+    a: "From solo-founder startups to enterprise programs—every business model gets a configuration that matches volume and compliance needs.",
   },
 ];
 
@@ -300,7 +300,7 @@ export function DirectResponseCallCenterPage() {
                       Next step
                     </p>
                     <p className="mx-auto mt-3 max-w-[18rem] text-lg font-bold leading-snug">
-                      Complete the form to get to know about us
+                      Complete the form to get to know us
                     </p>
                   </div>
                   <ul className="divide-y divide-border/60 p-2">

@@ -12,7 +12,7 @@ const HERO_IMAGE =
 const servicePillars = [
   {
     title: "Prospecting calls",
-    body: "Upscale outbound campaigns that put your team in front of qualified buyers—not random dials with no context.",
+    body: "Scaled outbound campaigns that put your team in front of qualified buyers—not random dials with no context.",
     icon: UsersIcon,
   },
   {
@@ -45,7 +45,7 @@ const servicePillars = [
 const testimonials = [
   {
     quote:
-      "Callify’s perspective-calling approach lifted sales roughly 30% within months. Professional reps, clear reporting, and leads we could actually work.",
+      "Callify’s prospecting approach lifted sales roughly 30% within months. Professional reps, clear reporting, and leads we could actually work.",
     name: "Otis Hoyles",
     role: "Owner, regional services firm",
   },
@@ -310,7 +310,7 @@ export function LeadGenerationServicesPage() {
                       Next step
                     </p>
                     <p className="mx-auto mt-3 max-w-[18rem] text-lg font-bold leading-snug">
-                      Complete the form to get to know about us
+                      Complete the form to get to know us
                     </p>
                   </div>
                   <ul className="divide-y divide-border/60 p-2">

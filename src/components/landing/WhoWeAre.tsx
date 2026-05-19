@@ -3,17 +3,17 @@ export function WhoWeAre() {
     <section id="about" className="border-y border-border bg-white py-16 sm:py-20">
       <div className="mx-auto max-w-7xl px-4">
         <p className="text-sm font-bold uppercase tracking-wide text-primary">
-          BPO service
+          BPO services
         </p>
         <h2 className="mt-2 text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
-          Who we are — BPO services provider
+          Who we are — a BPO service provider
         </h2>
         <p className="mt-6 max-w-3xl text-lg leading-relaxed text-muted">
           Callify Technologies is a trusted partner for high-quality BPO and
           contact center programs, helping businesses grow across insurance,
           healthcare, real estate, financial services, and technology. From
           qualified leads and sales support to dependable customer care, we
-          tailor playback, QA, and reporting to your brand.
+          tailor playbooks, QA, and reporting to your brand.
         </p>
         <p className="mt-4 max-w-3xl text-lg leading-relaxed text-muted">
           Our team of trained representatives ensures every interaction

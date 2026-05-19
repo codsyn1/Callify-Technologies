@@ -74,7 +74,7 @@ const faqs = [
   },
   {
     q: "How much does it cost?",
-    a: "Plans vary by volume and scope—many clients see fewer rejections, higher satisfaction, and time saved versus hiring in-house.",
+    a: "Plans vary by volume and scope—many clients see fewer escalations, higher satisfaction, and time saved versus hiring in-house.",
   },
   {
     q: "How fast can we get started?",
@@ -304,7 +304,7 @@ export function OutsourceEmailSupportServicesPage() {
                       Next step
                     </p>
                     <p className="mx-auto mt-3 max-w-[18rem] text-lg font-bold leading-snug">
-                      Complete the form to get to know about us
+                      Complete the form to get to know us
                     </p>
                   </div>
                   <ul className="divide-y divide-border/60 p-2">
@@ -342,8 +342,8 @@ export function OutsourceEmailSupportServicesPage() {
             so email support matches how you actually work.
           </p>
           <p className="mt-4 text-base leading-relaxed text-muted">
-            From full inbox management to essentials-only—communicate clearly and we
-            meet your needs together.
+            From full inbox management to essentials-only tiers—we align on scope
+            so email support matches how you work.
           </p>
           <div className="mt-8 divide-y divide-border rounded-2xl border border-border/90 bg-surface/30">
             {faqs.map((f) => (

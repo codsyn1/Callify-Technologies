@@ -301,7 +301,7 @@ export function LiveCallTransferServicesPage() {
                       Next step
                     </p>
                     <p className="mx-auto mt-3 max-w-[18rem] text-lg font-bold leading-snug">
-                      Complete the form to get to know about us
+                      Complete the form to get to know us
                     </p>
                   </div>
                   <ul className="divide-y divide-border/60 p-2">
@@ -402,8 +402,8 @@ export function LiveCallTransferServicesPage() {
             Increase sales & expert support
           </h3>
           <p className="mt-3 text-base leading-relaxed text-muted">
-            Warmer transfers raise engagement and close rates. Agents trained from
-            onboarding through expert coaching—available 24/7 for urgent handoffs.
+            Warmer transfers raise engagement and close rates. Agents are trained from
+            onboarding through expert coaching and are available 24/7 for urgent handoffs.
           </p>
 
           <div className="mt-12 rounded-2xl border border-primary/20 bg-white p-6 shadow-sm">

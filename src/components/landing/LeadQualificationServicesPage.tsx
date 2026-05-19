@@ -74,7 +74,7 @@ const faqs = [
   },
   {
     q: "What experience does your team bring?",
-    a: "Cross-industry work in finance, real estate, healthcare, retail, and tech—with playback adapted to each client’s ICP and compliance needs.",
+    a: "Cross-industry work in finance, real estate, healthcare, retail, and tech—with playbooks adapted to each client’s ICP and compliance needs.",
   },
   {
     q: "How much does it cost?",
@@ -301,7 +301,7 @@ export function LeadQualificationServicesPage() {
                       Next step
                     </p>
                     <p className="mx-auto mt-3 max-w-[18rem] text-lg font-bold leading-snug">
-                      Complete the form to get to know about us
+                      Complete the form to get to know us
                     </p>
                   </div>
                   <ul className="divide-y divide-border/60 p-2">

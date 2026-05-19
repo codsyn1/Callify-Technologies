@@ -1,11 +1,11 @@
 const quotes = [
   {
-    text: "Our satisfaction scores improved once Callify Technologies was onboard. Their inbound team is professional, flexible, and treats our customers like their own.",
+    text: "Our satisfaction scores improved once Callify Technologies was onboarded. Their inbound team is professional, flexible, and treats our customers like their own.",
     name: "Avery Meskell",
     role: "Operations",
   },
   {
-    text: "We struggled with qualified leads until Callify stepped in. Their outbound specialists consistently delivered mature, convertible opportunities.",
+    text: "We struggled with qualified leads until Callify stepped in. Their outbound specialists consistently delivered qualified, conversion-ready opportunities.",
     name: "Celia Riley",
     role: "Growth",
   },

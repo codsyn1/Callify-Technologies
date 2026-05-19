@@ -8,7 +8,7 @@ const faqs = [
     a: "We combine trained agents, clear processes, and reporting so you can scale support and revenue activities without building everything in-house.",
   },
   {
-    q: "What are advantages of outsourcing?",
+    q: "What are the advantages of outsourcing?",
     a: "Common benefits include access to skilled capacity, cost predictability, specialized expertise, focus on core work, scalability, and time-zone coverage.",
   },
 ];
